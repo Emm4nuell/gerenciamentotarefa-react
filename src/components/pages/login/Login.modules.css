@@ -1,0 +1,118 @@
+.container_login{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container_login_div{
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    box-shadow: 0px 0px 8px 2px #9a9a9a;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_login{
+    width: 50%;
+}
+
+.div_login img{
+    width: 40%;
+}
+
+.div_login .label_texto{
+    width: 100%;
+    font-size: 20px;
+    border: 2px solid red;
+}
+
+.div_login .login_icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.div_login .login_icons a svg{
+    font-size: 25px;
+    color: black;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.div_login .login_icons a svg:hover{
+    transition: 1s;
+    transform: scale(1.2);
+}
+
+.login_gif img{
+    width: 100%;
+    height: 350px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.container_login_div form{
+    display: grid;
+    padding: 10px;
+}
+
+.recuperarsenha{
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+
+.recuperarsenha a{
+    margin-top: -1rem;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.criarconta{
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.criarconta label{
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .login_gif{
+        display: none;
+    }
+
+    .login_form{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .container_login_div{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+    .div_login img{
+        text-align: center;
+        width: 100%;
+    }
+
+    .login_icons{
+        position: absolute;
+        padding: 10px;
+        bottom: 0;
+    }
+}
