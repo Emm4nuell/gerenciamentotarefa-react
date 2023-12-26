@@ -1,0 +1,121 @@
+.container_sge{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* background: linear-gradient(to right, #9452f9, #ac79f9); */
+}
+
+.section_principal{
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.header_principal{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 15px;
+    background: linear-gradient(to right, #9452f9, #ac79f9);
+    border-bottom: 2px solid #ffffff;
+}
+
+.header_principal .logo img{
+    width: 130px;
+}
+
+.header_principal nav ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 5rem;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.header_principal nav ul li{
+    list-style: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li:hover{
+    color: #23001c;
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.scale{
+    transform: scale(1.3);
+    color: #23001c;
+    display: block;
+}
+
+.header_principal .button a{
+    color: black;
+    padding: 6px 16px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+.section1{
+    margin-top: 50px;
+    width: 90%;
+    height: 70vh;
+    margin: auto;
+    padding: 10px;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #9452f9, #ac79f9);
+    border-radius: 20px;
+    opacity: 0;
+    transform: translate3d(60px, 0, 0);
+    transition: 1s;
+    animation: anime 2s ease-out forwards;
+}
+
+.section1 #span{
+    width: 45%;
+    height: 100%;
+    font-size: 20px;
+    /* text-align: justify; */
+    font-family: Montserrat;
+    /* font-family: 'Roboto', sans-serif;; */
+    color: #ffffff;
+    /* border: 2px solid red; */
+    
+}
+
+.section1 #span1{
+    opacity: 0;
+}
+
+h1{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 39px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes anime {
+    0%{
+        transform: translate3d(60px, 0, 0);
+        opacity: 0;
+    }
+    100%{
+        transform: translate3d(0px, 0, 0);
+        opacity: 1;
+    }
+}

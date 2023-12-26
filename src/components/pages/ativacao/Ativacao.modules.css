@@ -1,0 +1,13 @@
+.container_ativacao{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    color: green;
+    font-size: 20px;
+}
+
+.ativacao_msg{
+    text-align: center;
+}

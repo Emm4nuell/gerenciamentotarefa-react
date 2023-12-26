@@ -7,24 +7,21 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    /* border: 2px solid red; */
 }
 
-.containercadastro{
+.container_div_cadastro{
     background-color: white;
     border-radius: 10px;
     width: 50%;
-    /* height: 350px; */
     display: flex;
     box-shadow: 0px 0px 8px 2px #9a9a9a;
     justify-content: center;
     align-items: center;
 }
 
-.containercadastro form{
+.container_div_cadastro form{
     width: 100%;
     padding: 20px;
-    /* border: 2px solid red; */
 }
 
 input[type="file"]{
@@ -57,7 +54,7 @@ input[type="file"]{
     cursor: pointer;
 }
 
-.div_button{
+.cadastrar_button{
     width: 60%;
     margin: auto;
     display: flex;
@@ -80,6 +77,7 @@ select{
     border: none;
     outline: 0;
     border-bottom: 2px solid #9a9a9a;
+    background-color: #ffffff;
     color: #9a9a9a;
 }
 
@@ -102,4 +100,59 @@ option{
 
 .carregar_imagem img{
     border-radius: 100px;
+}
+
+/* .span{
+    width: 100%;
+    border: 2px solid red;
+    color: red;
+    transform: translateX(0);
+    animation: sp 2s ease-in-out infinite alternate;
+} */
+
+span{
+}
+
+@keyframes sp {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(100px);
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .div_input_cadastrar{
+        display: inline;
+        margin-top: 10px;
+    }
+
+    .cadastrar_button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .container_cadastrar{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .container_div_cadastro{
+        width: 100%;
+        border: 0;
+        padding: 0;
+        border-radius: 0px;      
+    }
+
+    .container_div_cadastro form{
+        min-height: 100vh;
+        width: 100%;
+        padding: 1rem;
+    }
+    
 }

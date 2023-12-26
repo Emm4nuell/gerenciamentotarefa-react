@@ -10,6 +10,7 @@ function NovoUsuario(){
     const [listId, setListId] = useState([])
     const [file, setFile] = useState('')
     const [image, setImage] = useState("https://dicas.zone/wp-content/uploads/2018/07/Screenshot_16-1.png")
+    const [msgerror, setMsgerror] = useState();
 
     const [dados, setDados] = useState({
         contato: '',
@@ -21,14 +22,22 @@ function NovoUsuario(){
         tarefas: [],
       });
 
-    const submit = (e) => {
+    async function submit(e){
         e.preventDefault()
+        save(dados)
+        .then(response => {
+            console.log(response.data)
+          })
+          .catch( err =>{
+            console.warn(err.response.data);
+            // setMsgerror(err.response.data.message)
+            alert(err.response.data.message)
+          })
     }
 
 
     const handlerChanger = (event) =>{
         setDados((dados) => ({...dados , [event.target.name]: event.target.value}))
-        console.log(dados)
     }
 
     const handleImageChange = (e) => {
@@ -45,37 +54,19 @@ function NovoUsuario(){
         }
       };
 
-    // function teste(){
-    //     const fileReader = new FileReader();
-    //     fileReader.readAsDataURL(file);
-    //     console.warn(fileReader)
-    // }
-
-    // useEffect((e) => {
-    //     try {
-    //         findAll("/usuario")
-    //         .then(response => setListar(response.data))
-    //         .catch(err => {console.error(err.code)})
-    //     } catch (error) {
-    //         console.error("Erro ao fazer a chamada o POST")
-    //     }
-    // }, [])
-
-    // useEffect((e) => {
-    //     findById("/usuario", "1")
-    //     .then(response => setListId(response.data))
-    //     .catch(err => console.error("Erro do findById") + err.code)
-    // }, [])
-
-    // console.error(listId)
-
     function cadastrar(e){ 
     }
 
     return (
         <div className="container_cadastrar">
-            <div className='containercadastro'>
+            <div className='container_div_cadastro'>
                 <form onSubmit={submit}>
+            <h1>{msgerror}</h1>
+            <div className="span">
+                <span>teste</span>
+            </div>
+
+                    {/* Div para adicionar foto */}
                     <div className='file_cadastrar'>
                         <img src="./img/sgtnovo.png" className='cadastrar_logo' alt="" />
                         <div className="carregar_imagem">
@@ -85,7 +76,9 @@ function NovoUsuario(){
                         </div>
                     </div>
 
-                    <InputModel htmlFor={'Nome'} type="text" onChanger={handlerChanger} required={true} name={'nome'}/>
+                    <div className="div_input_cadastrar">
+                        <InputModel htmlFor={'Nome'} type="text" onChanger={handlerChanger} required={true} name={'nome'}/>
+                    </div>
 
                     <div className='div_input_cadastrar'>
                         <InputModel htmlFor='CPF' type="text" onChanger={handlerChanger} required={true} name='cpf'/>
@@ -113,7 +106,7 @@ function NovoUsuario(){
                     </div>
 
 
-                    <div className='div_button'>
+                    <div className='cadastrar_button'>
                         <ButtonModel className={'green'} type={'submit'} name={'Cadastrar'}/>
                         <ButtonLink className={'red'} name={'Voltar'} href={'../'}/>
                     </div>

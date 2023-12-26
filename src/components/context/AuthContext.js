@@ -1,5 +1,10 @@
 import { createContext, useEffect, useState } from "react";
-import { authService } from "../services/Service";
+// import { authService } from "../services/Service";
+import { useNavigate, Navigate } from "react-router-dom";
+import Home from "../pages/private/home/Home";
+// import axios from "axios";
+import { authService, findAll, findById, save } from "../services/Service";
+// import Login from "../pages/public/sge/Sge";
 
 export const Context = createContext();
 
@@ -14,27 +19,29 @@ function AuthProvider({children}){
             setAuth(true)
         }else{
             setAuth(false)
+            // navigate("/")
         }
-        // autentication();
     }, [])
+    
 
-    async function autentication(e) {
+     function autentication(e) {
 
         if(!localStorage.getItem("token")){
             setLoand(true)
             authService(e)
-            .then((response) => response)
-            .then((dados) => {
-                setToken(dados.data)
-                localStorage.setItem("token", dados.data)
+            .then(response => response)
+            .then(response => {
+                localStorage.setItem("token", response.data);
+                console.warn(response.data)
                 setAuth(true)
-                setLoand(false)
+                // navigate("/home")
             })
             .catch(err => {
-                console.log("Erro na execução" + err.data)
-                localStorage.removeItem("token");
-                setLoand(false)
-            })
+                localStorage.removeItem("token")
+                setAuth(false)
+                console.warn(err.response.data)
+                alert(err.response.data.message)
+            });
         }
     }
 
