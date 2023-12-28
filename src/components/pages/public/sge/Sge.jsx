@@ -17,34 +17,21 @@ function Sge(){
     const [condicional, setCondicional] = useState(true)
     let x = 0;
     
-    useEffect((e) => {
-        const span = document.getElementById("span1").innerText
-        const span0 = document.getElementById("span0")
-        // var s = document.createElement('span')
-        const arrayspan = span.split("")
+    // useEffect((e) => {
+    //     const span = document.getElementById("span1").innerText
+    //     const span0 = document.getElementById("span0")
+    //     // var s = document.createElement('span')
+    //     const arrayspan = span.split("")
 
 
-        setInterval(() => {
-            if(x < arrayspan.length){
-                console.error(x)
-                span0.innerText += arrayspan[x]
-                x++
-            }
-            }, 30)
-
-        
-
-
-        // if(contador < arrayspan.length){
-        //     setTimeout(() => {span0.innerText += arrayspan[contador]}, 1000)
-        //     contador++
-        //     console.error(contador)
-        // }
-        // else{
-        //     setCondicional(false)
-        // }
-
-    }, [])
+    //     setInterval(() => {
+    //         if(x < arrayspan.length){
+    //             console.error(x)
+    //             span0.innerText += arrayspan[x]
+    //             x++
+    //         }
+    //         }, 30)
+    // }, [])
     
     useEffect((e) => {
         const li = document.getElementById(`li0`)
@@ -89,48 +76,57 @@ function Sge(){
 
             {/* MAIN */}
             <main className="sge_main">
-                <section className="section_principal sec0">
-                    <div className="section1">
-                        <div className="span" id="span">
-                            <h1>Um pouco sobre mim:</h1>
+{/* ***************** INICIO SECTION 1 ****************** */}
+                <section className="sge_section">
+
+                    <div className="section_page">
+
+                        <div className="section_page_div">
+
+                            <div className="section_img">
+                                <h1>Front-End</h1>
+                                <img id="img_front_end" src="./img/front_end_branco_novo.png" alt="" />
+                            </div>
+                            <div className="section_img">
+                                <img id="perfil" src="./img/perfil.png" alt="" />
+                                {/* <div className="info">
+                                    <span>Eduardo Emmanuel</span>
+                                    <span>Eduardo Emmanuel</span>
+                                    <span>Eduardo Emmanuel</span>
+                                    <span>Eduardo Emmanuel</span>
+                                </div> */}
+                            </div>
+                            <div className="section_img">
+                                <h1>Back-End</h1>
+                                <img id="img_back_end" src="./img/back_end_branco_novo.png" alt="" />
+                            </div>
+
+                        </div>
+                        {/* <div className="section_div" id="span">
+                            <h1>Sobre mim!</h1>
                             <span id="span0"></span>
                             <span id="span1">
                                     Sou um desenvolvedor de software apaixonado e altamente motivado, dedicado a criar soluções inovadoras e eficientes. 
                                 Com uma sólida formação acadêmica em Sistemas para Internet e anos de experiência prática, 
                                 desenvolvi uma profunda compreensão de diversas tecnologias e frameworks.
-
-                                {/* Minha abordagem para o desenvolvimento de software é baseada na resolução criativa de problemas e na entrega de produtos de alta qualidade. Sou proficientemente versado em linguagens de programação como JavaScript, Python e Java, e tenho experiência significativa no desenvolvimento de aplicações web e móveis.
-                                Minhas habilidades técnicas incluem:
-                                - Desenvolvimento Front-end: HTML5, CSS3, JavaScript (React, Angular)
-                                - Desenvolvimento Back-end: Java (Spring)
-                                - Banco de Dados: MySQL, PostgreSQL
-                                - Controle de Versão: Git, GitHub
-                                - Metodologias Ágeis: Scrum */}
-
-                                {/* Além das habilidades técnicas, sou conhecido por minha abordagem proativa, 
-                                capacidade de aprendizado rápido e excelentes habilidades de comunicação. 
-                                Estou constantemente buscando aprimorar minhas habilidades técnicas e me manter atualizado com as últimas tendências no mundo da tecnologia.
-
-                                Estou entusiasmado com a oportunidade de contribuir para projetos desafiadores, 
-                                enfrentar novos desafios e continuar aprimorando minhas habilidades como desenvolvedor de software. 
-                                Estou disponível para discussões sobre como minha experiência pode ser uma mais-valia para sua equipe. */}
                             </span>
-                        </div>
-                        <div className="span">
-                            span 2
-                        </div>
+                        </div> */}
+
                     </div>
                 </section>
+{/* ***************** FIM SECTION 1 ****************** */}
 
-                <section className="section_principal sec1">
+
+
+                <section className="sge_section sec1">
                     <h1>Section 2</h1>
                 </section>
 
-                <section className="section_principal sec2">
+                <section className="sge_section sec2">
                     <h1>Section 3</h1>
                 </section>
 
-                <section className="section_principal sec3">
+                <section className="sge_section sec3">
                     <h1>Section 4</h1>
                 </section>
 
@@ -213,3 +209,21 @@ export default Sge
     //     e.preventDefault();
     //     autentication(login)
     // }
+
+
+
+    // Minha abordagem para o desenvolvimento de software é baseada na resolução criativa de problemas e na entrega de produtos de alta qualidade. Sou proficientemente versado em linguagens de programação como JavaScript, Python e Java, e tenho experiência significativa no desenvolvimento de aplicações web e móveis.
+    //                             Minhas habilidades técnicas incluem:
+    //                             - Desenvolvimento Front-end: HTML5, CSS3, JavaScript (React, Angular)
+    //                             - Desenvolvimento Back-end: Java (Spring)
+    //                             - Banco de Dados: MySQL, PostgreSQL
+    //                             - Controle de Versão: Git, GitHub
+    //                             - Metodologias Ágeis: Scrum
+
+    //                             Além das habilidades técnicas, sou conhecido por minha abordagem proativa, 
+    //                             capacidade de aprendizado rápido e excelentes habilidades de comunicação. 
+    //                             Estou constantemente buscando aprimorar minhas habilidades técnicas e me manter atualizado com as últimas tendências no mundo da tecnologia.
+
+    //                             Estou entusiasmado com a oportunidade de contribuir para projetos desafiadores, 
+    //                             enfrentar novos desafios e continuar aprimorando minhas habilidades como desenvolvedor de software. 
+    //                             Estou disponível para discussões sobre como minha experiência pode ser uma mais-valia para sua equipe.
