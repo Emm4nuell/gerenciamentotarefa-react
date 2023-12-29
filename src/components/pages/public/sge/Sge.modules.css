@@ -15,7 +15,7 @@
     position: fixed;
     z-index: 1;
     width: 100%;
-    height: 10vh;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +50,7 @@ a{
     text-decoration: none;
 }
 
-ul li:hover{
+nav ul li:hover{
     color: #23001c;
     transform: scale(1.3);
     transition: 1s;
@@ -88,53 +88,156 @@ ul li:hover{
 
 .section_page .section_page_div{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    /* justify-content: space-around; */
     /* border: 3px solid purple; */
     width: 100%;
     height: 100%;
 }
 
 .section_img{
+    /* border: 3px solid orange; */
     text-align: center;
     /* border: 2px solid red; */
+    position: relative;
 
-}
-
-.section_img .info{
-    border: 2px solid red;
-    display: grid;
-}
-
-.section_img .info span{
-    width: 100%;
 }
 
 #img_back_end, #img_front_end, #perfil{
     width: 100%;
+    height: 350px;
 }
 
-#img_front_end{
+#img_front_end, #img_back_end{
     background: linear-gradient(to right, green, red, rgb(15, 200, 22), black);
     background-size: 200% 100%;
-    animation: imganime 2s linear infinite;
-}
-
-#img_back_end{
-    background: linear-gradient(to right, green, red, rgb(15, 200, 22), black);
-    background-size: 200% 100%;
-    animation: imganime 6s linear infinite;
+    animation: imganime 3s linear infinite;
 }
 
 #perfil{
+    margin-top: 6rem;
+    /* clip-path: circle(); */
+    border-radius: 50px;
     /* border: 2px solid red; */
-    margin-top: 2rem;
-    /* background-color: red; */
-    border-radius: 100px;
+    width: 60%;
+    padding: 0;
+    height: 150px;
 }
 
-#react{
-    border-radius: inherit;
+.div_front{
+    /* position: absolute; */
     width: 100%;
+    /* border: 2px solid black; */
+}
+
+.section_img .front_back{
+    position: absolute;
+    /* border: 2px solid green; */
+    top: 0;
+    width: 100%;
+    height: 350px;
+}
+
+.front_back ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.front_back ul li img{
+    width: 10%;
+    height: 29px;
+    cursor: pointer;
+}
+
+/* INICIO ICONES FRONT-END*/
+
+#react{
+    margin-top: 0.7rem;
+    margin-right: -6%;
+}
+
+#html{
+    margin-top: 2rem;
+    margin-right: 40%;
+}
+
+#css{
+    margin-top: 0.9rem;
+    margin-right: 4%;
+}
+
+#js{
+    margin-top: 1.7rem;
+    margin-right: 66%;
+}
+
+#aviso1{
+    margin-top: 1.1rem;
+    margin-right: 33%;
+    /* animation: avisoanime 2s linear infinite; */
+}
+
+#aviso2{
+    margin-top: 0.6rem;
+    margin-right: -18.5%;
+    /* animation: avisoanime 2s linear infinite; */
+}
+
+#aviso3{
+    margin-top: 1.4rem;
+    margin-right: 12.5%;
+    /* animation: avisoanime 2s linear infinite; */
+}
+
+/* FIM ICONES FRONT-END*/
+
+
+/* INICIO ICONES BACK-END*/
+#springboot{
+    margin-top: 0.7rem;
+    margin-right: 7%;
+}
+
+#kafka{
+    margin-top: 2rem;
+    margin-right: -40%;
+}
+
+#docker{
+    margin-top: 0.9rem;
+    margin-right: -2%;
+}
+
+#github{
+    margin-top: 1.7rem;
+    margin-right: -66%;
+}
+
+#git{
+    margin-top: 1.2rem;
+    margin-right: -31%;
+}
+
+#aviso_back1{
+    margin-top: 0.5rem;
+    margin-right: 19%;
+    /* animation: avisoanime 2s linear infinite; */
+}
+
+#aviso_back2{
+    margin-top: 1.4rem;
+    margin-right: -11.3%;
+    /* animation: avisoanime 2s linear infinite; */
+}
+
+img[hover="true"]:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+span{
+    color: #757575;
 }
 
 /* .section_page #span1{
@@ -162,4 +265,18 @@ ul li:hover{
     100%{
         background-position-x: 0%;
     }
+}
+
+@keyframes avisoanime {
+
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 20%;
+    }
+    100%{
+        opacity: 100%;
+    }
+    
 }

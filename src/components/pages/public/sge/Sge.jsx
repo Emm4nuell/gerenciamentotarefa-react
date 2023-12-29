@@ -84,21 +84,44 @@ function Sge(){
                         <div className="section_page_div">
 
                             <div className="section_img">
-                                <h1>Front-End</h1>
-                                <img id="img_front_end" src="./img/front_end_branco_novo.png" alt="" />
+                                {/* <h1>Front-End</h1> */}
+                                {/* <span>( Linguagens aplicada no Front-End do sistema )</span> */}
+                                <div className="div_front">
+                                    <img id="img_front_end" src="./img/front_end_branco.png" alt="" />
+                                </div>
+                                <div className="front_back">
+                                    <ul>
+                                        <li><a href="#"><img id="react" src="./img/react.png" alt="" hover="true"/></a></li>
+                                        <li><a href="#"><img id="html" src="./img/html.png" alt="" hover="true"/></a></li>
+                                        <li><a href="#"><img id="css" src="./img/css.png" alt="" hover="true"/></a></li>
+                                        <li><a href="#"><img id="js" src="./img/js.png" alt="" hover="true"/></a></li>
+                                        <li><a href="#"><img id="aviso1" src="./img/aviso.png" alt="" /></a></li>
+                                        <li><a href="#"><img id="aviso2" src="./img/aviso.png" alt="" /></a></li>
+                                        <li><a href="#"><img id="aviso3" src="./img/aviso.png" alt="" /></a></li>
+                                    </ul>
+                                </div>
                             </div>
+
                             <div className="section_img">
                                 <img id="perfil" src="./img/perfil.png" alt="" />
-                                {/* <div className="info">
-                                    <span>Eduardo Emmanuel</span>
-                                    <span>Eduardo Emmanuel</span>
-                                    <span>Eduardo Emmanuel</span>
-                                    <span>Eduardo Emmanuel</span>
-                                </div> */}
                             </div>
                             <div className="section_img">
-                                <h1>Back-End</h1>
-                                <img id="img_back_end" src="./img/back_end_branco_novo.png" alt="" />
+                                {/* <h1>Back-End</h1> */}
+                                {/* <span>( Linguagem e tecnologias aplicada no Back-End )</span> */}
+                                <div className="div_back">
+                                    <img id="img_front_end" src="./img/back_end_branco.png" alt="" />
+                                </div>
+                                <div className="front_back">
+                                    <ul>
+                                        <li><a href="#"><img id="springboot" src="./img/springboot.png" alt="" hover="true"/></a></li>
+                                        <li><a href="#"><img id="kafka" src="./img/kafka.png" alt="" hover="true"/></a></li>
+                                        <li><a href="#"><img id="docker" src="./img/docker.png" alt="" hover="true"/></a></li>
+                                        <li><a href="#"><img id="github" src="./img/github.png" alt="" hover="true"/></a></li>
+                                        <li><a href="#"><img id="git" src="./img/git.png" alt="" hover="true"/></a></li>
+                                        <li><a href="#"><img id="aviso_back1" src="./img/aviso.png" alt="" /></a></li>
+                                        <li><a href="#"><img id="aviso_back2" src="./img/aviso.png" alt="" /></a></li>
+                                    </ul>
+                                </div>
                             </div>
 
                         </div>
