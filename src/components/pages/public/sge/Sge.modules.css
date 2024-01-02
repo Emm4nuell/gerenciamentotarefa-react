@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    /* background: linear-gradient(to right, #9452f9, #ac79f9); */
+    background: #1b1a1c;
 }
 
 .sge_section{
@@ -20,9 +20,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 15px;
+    /* background-color: #626262; */
     background-color: #00d8ff;
     /* background: linear-gradient(to right, #9452f9, #ac79f9); */
-    border-bottom: 2px solid #ffffff;
+    /* border-bottom: 2px solid #ffffff; */
 }
 
 .header_principal .logo img{
@@ -265,18 +266,4 @@ span{
     100%{
         background-position-x: 0%;
     }
-}
-
-@keyframes avisoanime {
-
-    0%{
-        opacity: 100%;
-    }
-    50%{
-        opacity: 20%;
-    }
-    100%{
-        opacity: 100%;
-    }
-    
 }

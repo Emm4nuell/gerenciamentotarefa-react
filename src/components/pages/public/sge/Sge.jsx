@@ -87,7 +87,7 @@ function Sge(){
                                 {/* <h1>Front-End</h1> */}
                                 {/* <span>( Linguagens aplicada no Front-End do sistema )</span> */}
                                 <div className="div_front">
-                                    <img id="img_front_end" src="./img/front_end_branco.png" alt="" />
+                                    <img id="img_front_end" src="./img/front_end_black.png" alt="" />
                                 </div>
                                 <div className="front_back">
                                     <ul>
@@ -109,7 +109,7 @@ function Sge(){
                                 {/* <h1>Back-End</h1> */}
                                 {/* <span>( Linguagem e tecnologias aplicada no Back-End )</span> */}
                                 <div className="div_back">
-                                    <img id="img_front_end" src="./img/back_end_branco.png" alt="" />
+                                    <img id="img_front_end" src="./img/back_end_black.png" alt="" />
                                 </div>
                                 <div className="front_back">
                                     <ul>
