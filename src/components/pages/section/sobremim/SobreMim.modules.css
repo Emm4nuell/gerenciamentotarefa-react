@@ -1,0 +1,23 @@
+.sobremim{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 86%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.sobremim foto, .sobremim aside{
+    width: 50%;
+}
+
+.foto img, .foto{
+    height: 250px;
+    width: 250px;
+}
+
+aside p{
+    text-align: justify;
+}

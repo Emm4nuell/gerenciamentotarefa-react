@@ -6,39 +6,57 @@ import "./Sge.modules.css"
 import { FaInstagram, FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import {InputModel} from "../../../input/InputModel";
 import { useLocation, useNavigate } from "react-router-dom";
+import Inicio from "../../section/inicio/Inicio";
+import SobreMim from "../../section/sobremim/SobreMim";
 
 function Sge(){
     
-    const div_scroll = document.querySelectorAll(".section_principal");
+    // const div_scroll = document.querySelectorAll(".section_principal");
+    const sec0 = useRef(null)
+    const sec1 = useRef(null)
+    const sec2 = useRef(null)
+    const sec3 = useRef(null)
+    const sec4 = useRef(null)
+    const sec5 = useRef(null)
+    const sec6 = useRef(null)
     const height = window.innerHeight;
     const width = window.innerWidth;
     const [ref, setRef] = useState(0);
-    const [contador, setContador] = useState(0)
-    const [condicional, setCondicional] = useState(true)
-    let x = 0;
-    
-    // useEffect((e) => {
-    //     const span = document.getElementById("span1").innerText
-    //     const span0 = document.getElementById("span0")
-    //     // var s = document.createElement('span')
-    //     const arrayspan = span.split("")
-
-
-    //     setInterval(() => {
-    //         if(x < arrayspan.length){
-    //             console.error(x)
-    //             span0.innerText += arrayspan[x]
-    //             x++
-    //         }
-    //         }, 30)
-    // }, [])
+    const [coordenadas, setCoordenadas] = useState(0)
     
     useEffect((e) => {
         const li = document.getElementById(`li0`)
         window.scroll(0, height*ref)
         li.classList.add("scale")
-        // console.error(`X: ${width} || Y: ${height}`)
+        
+        window.addEventListener('scroll', scrollEvento)
+
     }, [])
+
+    const scrollEvento = (e) => {
+        const c0 = sec0.current.getBoundingClientRect();
+        const c1 = sec1.current.getBoundingClientRect();
+        const c2 = sec2.current.getBoundingClientRect();
+        const c3 = sec3.current.getBoundingClientRect();
+        const c4 = sec4.current.getBoundingClientRect();
+        const c5 = sec5.current.getBoundingClientRect();
+        const c6 = sec6.current.getBoundingClientRect();
+        const reac = document.body.getBoundingClientRect();
+
+        
+        const h = Math.abs(c0.top)
+        // console.error(h)
+        if(Math.abs(c0.top) == 0 && Math.abs(c0.top) <= window.innerHeight){window.scroll(0, height*0)}
+        if(Math.abs(c1.top) == 0 && Math.abs(c1.top) <= window.innerHeight){window.scroll(0, height*1)}
+        if(Math.abs(c2.top) == 0 && Math.abs(c2.top) <= window.innerHeight){window.scroll(0, height*2)}
+        if(Math.abs(c3.top) == 0 && Math.abs(c3.top) <= window.innerHeight){window.scroll(0, height*3)}
+        if(Math.abs(c4.top) == 0 && Math.abs(c4.top) <= window.innerHeight){console.warn("C4")}
+        if(Math.abs(c5.top) == 0 && Math.abs(c5.top) <= window.innerHeight){console.warn("C5")}
+        if(Math.abs(c6.top) == 0 && Math.abs(c6.top) <= window.innerHeight){console.warn("C6")}
+
+
+        
+    }
     
     function scroll(e){
         const li = document.getElementById(`li${e}`)
@@ -62,10 +80,13 @@ function Sge(){
                 {/* NAV */}
                 <nav>
                     <ul>
-                        <li id="li0"><a onClick={() => scroll(0)}>Home</a></li>
-                        <li id="li1"><a onClick={() => scroll(1)}>Perfil</a></li>
-                        <li id="li2"><a onClick={() => scroll(2)}>Apresentação</a></li>
-                        <li id="li3"><a onClick={() => scroll(3)}>Sobre</a></li>
+                        <li id="li0"><a onClick={() => scroll(0)}>Início</a></li>
+                        <li id="li1"><a onClick={() => scroll(1)}>Sobre mim</a></li>
+                        <li id="li2"><a onClick={() => scroll(2)}>Serviços</a></li>
+                        <li id="li3"><a onClick={() => scroll(3)}>Habilidades</a></li>
+                        <li id="li4"><a onClick={() => scroll(4)}>Conquistas</a></li>
+                        <li id="li5"><a onClick={() => scroll(5)}>Projetos</a></li>
+                        <li id="li6"><a onClick={() => scroll(6)}>Contato</a></li>
                     </ul>
                 </nav>
 
@@ -76,8 +97,19 @@ function Sge(){
 
             {/* MAIN */}
             <main className="sge_main">
-{/* ***************** INICIO SECTION 1 ****************** */}
-                <section className="sge_section">
+
+{/* ***************** SECTION 0 ****************** */}
+                <section className="sge_section sec0" ref={sec0}>
+                    <Inicio />
+                </section>
+
+{/* ***************** SECTION 1 ****************** */}
+                <section className="sge_section sec1" ref={sec1}>
+                    <SobreMim />
+                </section>
+
+{/* ***************** SECTION 2 ****************** */}
+                <section className="sge_section sec2" ref={sec2}>
 
                     <div className="section_page">
 
@@ -87,7 +119,7 @@ function Sge(){
                                 {/* <h1>Front-End</h1> */}
                                 {/* <span>( Linguagens aplicada no Front-End do sistema )</span> */}
                                 <div className="div_front">
-                                    <img id="img_front_end" src="./img/front_end_black.png" alt="" />
+                                    <img id="img_front_end" src="./img/front_end_branco.png" alt="" />
                                 </div>
                                 <div className="front_back">
                                     <ul>
@@ -103,13 +135,13 @@ function Sge(){
                             </div>
 
                             <div className="section_img">
-                                <img id="perfil" src="./img/perfil.png" alt="" />
+                                <img id="perfil" src="./img/chip.png" alt="" />
                             </div>
                             <div className="section_img">
                                 {/* <h1>Back-End</h1> */}
                                 {/* <span>( Linguagem e tecnologias aplicada no Back-End )</span> */}
                                 <div className="div_back">
-                                    <img id="img_front_end" src="./img/back_end_black.png" alt="" />
+                                    <img id="img_front_end" src="./img/back_end_branco.png" alt="" />
                                 </div>
                                 <div className="front_back">
                                     <ul>
@@ -137,20 +169,21 @@ function Sge(){
 
                     </div>
                 </section>
-{/* ***************** FIM SECTION 1 ****************** */}
 
-
-
-                <section className="sge_section sec1">
-                    <h1>Section 2</h1>
+                <section className="sge_section sec3" ref={sec3}>
+                    <h1>Em breve...</h1>
                 </section>
 
-                <section className="sge_section sec2">
-                    <h1>Section 3</h1>
+                <section className="sge_section sec4" ref={sec4}>
+                    <h1>Em breve...</h1>
                 </section>
 
-                <section className="sge_section sec3">
-                    <h1>Section 4</h1>
+                <section className="sge_section sec5" ref={sec5}>
+                    <h1>Em breve...</h1>
+                </section>
+
+                <section className="sge_section sec6" ref={sec6}>
+                    <h1>Em breve...</h1>
                 </section>
 
 
